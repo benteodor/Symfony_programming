@@ -1,48 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .input_field {
-    display: flex;
-    justify-content: space-between;
-    width: 35vw;
-    gap: 1rem;
-    padding: 0.3rem;
-    margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.input_field label {
+  font-weight: bold;
 }
 
 .radio_container {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .radio_container label {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 h3 {
-    margin-left: 2rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.button-54 {
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000;
-    cursor: pointer;
-    border: 3px solid;
-    padding: 0.25em 0.5em;
-    position: relative;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    align-self: center;
+.button {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
 }
 
 .result_container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.result h3{
-    margin: 0;
+.result {
+  text-align: center;
+}
+
+.result h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: #007bff;
 }
