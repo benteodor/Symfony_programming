@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calculator App{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="CSS/calculator.css">
+
+<div class="wrapper">
+  <h1>Calculator App</h1>
+  <i>Enter both numbers, choose an operator and click Calculate</i>
+
+  <form action={{ path("calculator") }} method="post">
+    <div class="input_field">
+      <label for="first_number">Enter first number</label>
+      <input type="number" step="0.001" name="first_number" id="first_number" required>
+    </div>
+    <div class="input_field">
+      <span>Choose an operator</span>
+      <div class="radio_container">
+        <input type="radio" id="&plus;" name="operator" value="&plus;" required>
+        <label for="&plus;">&plus;</label>
+        <input type="radio" id="&minus;" name="operator" value="&minus;">
+        <label for="&minus;">&minus;</label>
+        <input type="radio" id="&times;" name="operator" value="&times;">
+        <label for="&times;">&times;</label>
+        <input type="radio" id="&divide;" name="operator" value="&divide;">
+        <label for="&divide;">&divide;</label>
+      </div>
+    </div>
+    <div class="input_field">
+      <label for="second_number">Enter second number</label>
+      <input type="number" step="0.001" name="second_number" id="second_number" required>
+    </div>
+    <div class="result_container">
+      <input type="submit" value="Calculate" class="button-54">
+
+      {% if result != null %}
+        <div class="result">
+          <h3>
+            Result: {{ first_number ~ " " ~ operator ~ " " ~ second_number ~ " = " ~ result  }}
+          </h3>
+        </div>
+      {% endif %}
+      
+    </div>
+  </form>
+
+
+</div>
+
+{% endblock %}

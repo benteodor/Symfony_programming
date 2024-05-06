@@ -1,0 +1,48 @@
+.input_field {
+    display: flex;
+    justify-content: space-between;
+    width: 35vw;
+    gap: 1rem;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.radio_container {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.radio_container label {
+    margin-right: 0.5rem;
+}
+
+h3 {
+    margin-left: 2rem;
+}
+
+.button-54 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    align-self: center;
+}
+
+.result_container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.result h3{
+    margin: 0;
+}
